@@ -1,0 +1,48 @@
+/* global code  */
+
+body {
+	font-family: sans-serif, Verdana, Arial, Helvetica;
+	margin: auto;
+    max-width: 100%;
+}
+
+header {
+	background-color: rgba(215, 228, 212, 1);
+}
+
+main {
+	background-color: rgba(215, 228, 212, 0.32);
+}
+
+footer {
+	background-color: rgba(215, 228, 212, 1);
+}
+
+.onpage {
+    font-weight: bold;
+}
+
+
+
+/* index.html  */
+
+
+
+/* about.html */
+
+
+
+/* blogs.html */
+
+
+
+/* specificblog.html */
+
+
+
+/* contact.html */
+
+.contact-form {
+	display: block;
+}
+
