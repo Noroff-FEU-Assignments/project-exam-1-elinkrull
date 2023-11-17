@@ -8,10 +8,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Plantastic living homepage</title>
 	<script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script>
+	<script defer type="module" src="script.js/contact.js"></script>
 </head>
 
 <body>
 	<header>
+		<figure>
+			<a href="index.html"><img src="images/monsteraleaf.jpg" alt="A monstera leaf" class="logo" /></a>
+		</figure>
+		<p class="sitename">Plantastic living</p>
+		<label for="hamburger-checkbox"><i class="fa-solid fa-bars"></i></label>
+		<input type="checkbox" id="hamburger-checkbox" />
 		<nav>
 			<a href="index.html">Home</a>
 			<a href="about.html">About</a>
@@ -21,27 +28,36 @@
 	</header>
 
 	<main>
-		<form method="post" class="contact-form">
+		<h1 class="contact-header">Contact</h1>
+		<form method="post" class="contact-form" id="contact-form">
 			<label for="name" class="contact-label">Name</label>
 			<input type="text" id="name" name="name">
+			<div class="form-error" id="name-error">Name must be more than 5 characters long</div>
 			<label for="email" class="contact-label">E-mail</label>
 			<input type="email" id="email" name="email">
-			<label for="subject" class="contact-subject">subject</label>
+			<div class="form-error" id="email-error">Please enter a valig email adresse</div>
+			<label for="subject" class="contact-label">Subject</label>
 			<input type="text" id="subject" name="subject">
+			<div class="form-error" id="subject-error">Subject must be more than 15 characters long</div>
 			<label for="message" class="contact-label">Message</label>
 			<textarea name="message" id="message" cols="30" rows="10"></textarea>
-			<input type="submit" value="Send" class="send-message-button">
+			<div class="form-error" id="message-error">Message must be more than 25 characters long</div>
+			<button type="submit" value="Submit" class="submit-message-button">Submit</button>
 		</form>
 	</main>
 
 	<footer>
-		<div>
-			<p>By Elin Thoen Jakobsen</p>
-			<i class="fa-brands fa-facebook"></i>
-			<i class="fa-brands fa-instagram"></i>
-			<i class="fa-brands fa-snapchat"></i>
-			<i class="fa-brands fa-tiktok"></i>
-			<i class="fa-brands fa-youtube"></i>
+		<div class="footer">
+			<div>
+				<p>By Elin Thoen Jakobsen</p>
+			</div>
+			<ul class="some-icons">
+				<i class="fa-brands fa-facebook"></i>
+				<i class="fa-brands fa-instagram"></i>
+				<i class="fa-brands fa-snapchat"></i>
+				<i class="fa-brands fa-tiktok"></i>
+				<i class="fa-brands fa-youtube"></i>
+			</ul>
 		</div>
 	</footer>
 </body>

@@ -6,12 +6,19 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>About me</title>
+	<title>Plantastic living homepage</title>
 	<script src="https://kit.fontawesome.com/727f4fec37.js" crossorigin="anonymous"></script>
+	<script defer type="module" src="script.js/about.js"></script>
 </head>
 
 <body>
 	<header>
+		<figure>
+			<a href="index.html"><img src="images/monsteraleaf.jpg" alt="A monstera leaf" class="logo" /></a>
+		</figure>
+		<p class="sitename">Plantastic living</p>
+		<label for="hamburger-checkbox"><i class="fa-solid fa-bars"></i></label>
+		<input type="checkbox" id="hamburger-checkbox" />
 		<nav>
 			<a href="index.html">Home</a>
 			<a href="about.html" class="onpage">About</a>
@@ -20,7 +27,8 @@
 		</nav>
 	</header>
 
-	<main>
+	<main class="about-section">
+		<h1>About me</h1>
 		<div>
 			Hello, fellow plant enthusiasts! I'm Elin, and I'm thrilled to welcome you to my green oasis in the
 			digital world. At 37 years young, I've discovered that there's no age limit on falling head over heels for
@@ -50,13 +58,17 @@
 	</main>
 
 	<footer>
-		<div>
-			<p>By Elin Thoen Jakobsen</p>
-			<i class="fa-brands fa-facebook"></i>
-			<i class="fa-brands fa-instagram"></i>
-			<i class="fa-brands fa-snapchat"></i>
-			<i class="fa-brands fa-tiktok"></i>
-			<i class="fa-brands fa-youtube"></i>
+		<div class="footer">
+			<div>
+				<p>By Elin Thoen Jakobsen</p>
+			</div>
+			<ul class="some-icons">
+				<i class="fa-brands fa-facebook"></i>
+				<i class="fa-brands fa-instagram"></i>
+				<i class="fa-brands fa-snapchat"></i>
+				<i class="fa-brands fa-tiktok"></i>
+				<i class="fa-brands fa-youtube"></i>
+			</ul>
 		</div>
 	</footer>
 </body>

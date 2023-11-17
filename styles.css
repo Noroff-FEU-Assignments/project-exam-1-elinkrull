@@ -7,22 +7,72 @@ body {
 }
 
 header {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
 	background-color: rgba(215, 228, 212, 1);
 }
 
-main {
-	background-color: rgba(215, 228, 212, 0.32);
+.sitename {
+	color: rgba(5, 84, 36, 1);
+	font-size: 20px;
 }
 
-footer {
-	background-color: rgba(215, 228, 212, 1);
+#hamburger-checkbox:checked ~ nav {
+    display: block;
+    position: absolute;
+    bottom: -80px;
+	right: 10px;
+}
+
+nav, #hamburger-checkbox {
+    display: none;
+}
+
+nav a {
+	color: rgba(5, 84, 36, 1);
+    display: block;
+	text-decoration: none;
+}
+
+.fa-bars {
+    position: absolute;
+    font-size: 16px;
+    bottom: 20px;
+    right: 20px;
 }
 
 .onpage {
     font-weight: bold;
 }
 
+.logo {
+	max-width: 100px;
+}
 
+main {
+	background-color: rgba(215, 228, 212, 0.32);
+	padding: 20px 50px;
+}
+
+.footer {
+	background-color: rgba(215, 228, 212, 1);
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 30px;
+}
+
+.some-icons {
+	display: flex;
+	font-size: 25px;
+	gap: 25px;
+}
+
+.by-name {
+	color: rgba(56, 109, 77, 1);
+	font-size: 20px;
+}
 
 /* index.html  */
 
@@ -30,11 +80,18 @@ footer {
 
 /* about.html */
 
-
+.about-section {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 40px 30px 80px 30px;
+}
 
 /* blogs.html */
 
+#blog-posts {
 
+}
 
 /* specificblog.html */
 
@@ -42,7 +99,98 @@ footer {
 
 /* contact.html */
 
-.contact-form {
-	display: block;
+.contact-header {
+	padding-left: 30px;
+	padding-top: 40px;
 }
 
+#contact-form {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 30px 80px 30px;
+}
+
+form label {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#name, #email, #subject {
+	max-width: 250px;
+	padding: 5px;
+}
+
+#subject {
+	max-width: 450px;
+}
+
+#message {
+	max-width: 650px;
+}
+
+.submit-message-button {
+	margin-top: 30px;
+	max-width: 100px;
+	padding: 5px 10px;
+	background-color: rgba(56, 109, 77, 1);
+	color: white;
+	font-size: 16px;
+}
+
+.form-error {
+	display: none;
+	color: red;
+}
+
+
+/* responsive */
+
+@media(min-width:550px) {
+
+	.sitename {
+		padding-left: 40px;
+	}
+
+}
+
+@media(min-width:680px) {
+
+	.fa-bars, .sitename {
+        display: none;
+    }
+
+	nav {
+        display: flex;
+        font-size: 20px;
+		gap: 60px;
+		padding-bottom: 20px;
+    }
+}
+
+
+@media(min-width:820px) {
+
+    nav {
+        display: flex;
+        font-size: 20px;
+		gap: 100px;
+    }
+
+	.about-section, #contact-form {
+		padding: 40px 150px 80px 150px;
+	}
+
+	#contact-form {
+		padding-top: 0px;
+	}
+
+	.contact-header {
+		padding-left: 150px;
+	}
+
+}
+
+
+@media(min-width:1150px) {
+
+}
