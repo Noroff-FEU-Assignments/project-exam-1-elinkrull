@@ -40,11 +40,12 @@ function showError(message) {
   
 	  const title = getPostTitleFromQuery();
   
-	  if (!postId) showError(message);
+	  if (!postId) 
+	  console.log(showError);
+	//   showError(message);
 
   	  const response = await fetch(`https://projectexam1.elinjakobsen.no/wp-json/wp/v2/posts/${postId}`);
 	  const postDetail = await response.json();
-	  console.log(postDetail);
   
 	  const postTitleContainer = document.getElementById("title");
 	  const postDetailContainer = document.getElementById("specific-post-container");
