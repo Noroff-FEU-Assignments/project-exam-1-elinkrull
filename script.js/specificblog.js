@@ -4,7 +4,6 @@ function showError(message) {
 	errorContainer.innerHTML += `<h2>${message}</h2>`;
   }
 
-    
 //Loading indicator
 function showLoadingIndicator() {
 	const loadingIndicator = document.getElementById("specific-post-container");

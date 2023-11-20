@@ -64,6 +64,7 @@ main {
 }
 
 .some-icons {
+	color: rgba(5, 84, 36, 1);
 	display: flex;
 	font-size: 25px;
 	gap: 25px;
@@ -76,6 +77,14 @@ main {
 
 /* index.html  */
 
+.latest-post-header {
+	align-items: center;
+}
+
+#homepage-blogs {
+	display: flex;
+	align-items: center;
+}
 
 
 /* about.html */
@@ -89,9 +98,6 @@ main {
 
 /* blogs.html */
 
-#blog-posts {
-
-}
 
 /* specificblog.html */
 
