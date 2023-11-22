@@ -1,14 +1,14 @@
 //Error handling
 
 function showError(message) {
-	const errorContainer = document.getElementById("blog-posts");
+	const errorContainer = document.getElementById("blog-container");
 	errorContainer.innerHTML += `<h2>${message}</h2>`;
   }
 
 // Loading indicator
 
 function showLoadingIndicator() {
-	const loadingIndicator = document.getElementById("blog-posts");
+	const loadingIndicator = document.getElementById("blog-container");
 	loadingIndicator.innerHTML = "<li>Loading...</li>";
 }
 
@@ -28,79 +28,46 @@ async function getPosts() {
 	  }
 }
 
-async function displayPosts() {	
-	try {
-		const blogPosts = await getPosts();
-		const blogPostsContainer = document.getElementById("blog-posts");
-		blogPostsContainer.innerHTML = "";
 
-		for (let i = 0; i < 10; i++) {
-			const post = blogPosts[i];
+async function displayPosts(data) {	
+		const homepageContainer = document.getElementById("blog-container");
+		homepageContainer.innerHTML = "";
+		data.slice(0, 10).forEach(element => {
+			const card = createCard(element);
+			homepageContainer.append(card);
+		});
 
-			blogPostsContainer.innerHTML += `<div class="all-posts-container">
-			<a href="specificblog.html?id=${post.id}&title=${post.title.rendered}"><h2>${post.title.rendered}</h2></a>
-			</div>`;
+		function createCard(element) {
+			console.log(element);
+			const { id, title, jetpack_featured_media_url } = element;
+			if (!id || !title || !jetpack_featured_media_url) {
+				showError(error.message);	
+				return;									
+			} 
+	
+			const divElement = document.createElement("div");
+			const h2Element = document.createElement("h2");
+			const pElement = document.createElement("p");
+			const imageElement = document.createElement("img");
+			imageElement.classList.add("card-image");
+			imageElement.src = jetpack_featured_media_url;
+			divElement.classList.add("card");
+			divElement.id = element.id;
+			divElement.addEventListener("click", () => {
+				window.location.href = `specificblog.html?id=${element.id}`;
+			  });
+
+			h2Element.textContent = element.title.rendered;
+			pElement.textContent = element.content.rendered;
+			divElement.append(h2Element, imageElement);
+			return divElement;
 		}
-	} catch (error) {
-		showError(error.message);
-	  }
-}
+	}
+
+	async function init() {
+		const data = await getPosts(url);	
+		displayPosts(data);
+	}
 	
-displayPosts();
+	init();
 
-// // API call to get media
-// const mediaURL = "https://projectexam1.elinjakobsen.no/wp-json/wp/v2/media";
-
-// async function getPictures() {
-// 	try {
-// 		showLoadingIndicator();
-// 		const response = await fetch(url);
-// 	  	const result = await response.json();
-// 		return(result);
-
-// 	} catch (error) {
-// 		throw new Error("Sorry, we could not fetch the blog posts");
-// 	  }
-// }
-
-// async function displayPictures() {
-// 	try {
-// 		const blogPictures = await getPictures();
-// 		const blogPicturesContainer = document.getElementById("blog-pictures");
-// 		blogPicturesContainer.innerHTML = "";
-	
-// 		for (let i = 0; i < blogPictures.length; i++) {
-// 			const picture = blogPictures[i];
-
-// 			blogPicturesContainer.innerHTML += `<div class="all-pictures-container">
-// 			<a href="specificblog.html?id=${picture.id}&title=${picture.title}"><img src="${picture.media_details.file}" alt="${picture.title.rendered}" class="pictures"></a>
-// 			<h2>${post.title.rendered}</h2>
-// 			</div>`;
-// 		}
-// 	} catch (error) {
-// 		showError(error.message);
-// 	  }
-
-// }
-
-
-
-
-
-//FUnction to display the blog posts
-// async function displayPosts() {
-// 	const data = await fetchPosts();
-// 	const allPosts = document.getElementById("blog-posts");
-// 	allPosts.innerHTML ="";
-
-// 	data.forEach((post) => {
-// 		const blogPosts = document.createElement("div")
-// 		blogPosts.textContent = post.title.rendered;
-// 		blogPosts.addEventListener("click", () => {
-// 			window.location.href = `specificblog.html?id=${post.id}`;
-// 		});
-// 		allPosts.appendChild(blogPosts);
-// 	});
-// }
-
-// displayPosts();

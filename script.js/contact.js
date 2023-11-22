@@ -52,11 +52,11 @@ function validateEmail(email) {
 }
 
 //function to validate the form when click is made outside the inputfield
-document.addEventListener("click", function (event) {
-	if (!inputField.contains(event.target)) {
-		validateForm(event);
-	}
-});
+// document.addEventListener("click", function (event) {
+// 	if (!inputField.contains(event.target)) {
+// 		validateForm(event);
+// 	}
+// });
 
 
 

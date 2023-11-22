@@ -46,7 +46,7 @@ async function displayPosts(data) {
 	function createCard(element) {
 		console.log(element);
 		const { id, title, jetpack_featured_media_url } = element;
-		if (!id || !title ) {
+		if (!id || !title || !jetpack_featured_media_url) {
 			showError(error.message);	
 			return;									
 		} 
@@ -60,7 +60,7 @@ async function displayPosts(data) {
 		divElement.classList.add("card");
 		divElement.id = element.id;
 		divElement.addEventListener("click", ()=> {
-			window.location.href = "";
+			window.location.href = `specificblog.html?id=${element.id}`;
 		})
 		h2Element.textContent = element.title.rendered;
 		pElement.textContent = element.content.rendered;

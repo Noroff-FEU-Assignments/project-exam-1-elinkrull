@@ -57,3 +57,5 @@ async function fetchPostDetail() {
 }
 
 fetchPostDetail();
+
+// <div>${postDetail.jetpack_featured_media_url}</div>
