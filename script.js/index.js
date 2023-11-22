@@ -27,6 +27,14 @@ async function getPosts() {
 	  }
 }
 
+
+// function sanitizeData(rawData) {
+// 	const div = createElement("div");
+// 	div.innerHTML = rawData;
+// 	const text = div.innerText;
+// 	return text;
+// }
+
 async function displayPosts(data) {	
 		const homepageContainer = document.getElementById("homepage-container");
 		homepageContainer.innerHTML = "";
@@ -37,8 +45,8 @@ async function displayPosts(data) {
 
 	function createCard(element) {
 		console.log(element);
-		const { id, title, content } = element;
-		if (!id || !title || !content) {
+		const { id, title, jetpack_featured_media_url } = element;
+		if (!id || !title ) {
 			showError(error.message);	
 			return;									
 		} 
@@ -47,15 +55,16 @@ async function displayPosts(data) {
 		const h2Element = document.createElement("h2");
 		const pElement = document.createElement("p");
 		const imageElement = document.createElement("img");
-
+		imageElement.classList.add("card-image");
+		imageElement.src = jetpack_featured_media_url;
 		divElement.classList.add("card");
 		divElement.id = element.id;
 		divElement.addEventListener("click", ()=> {
-			window.location.href = ""
+			window.location.href = "";
 		})
 		h2Element.textContent = element.title.rendered;
 		pElement.textContent = element.content.rendered;
-		divElement.append(h2Element, pElement, imageElement)
+		divElement.append(h2Element, imageElement)
 		return divElement;
 	}
 }
