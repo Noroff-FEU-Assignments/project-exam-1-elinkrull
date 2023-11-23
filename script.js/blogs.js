@@ -71,3 +71,13 @@ async function displayPosts(data) {
 	
 	init();
 
+	//function to load more blog posts when button is being clicked
+// const viewMoreButton = getElementById("view-more-button");
+
+// viewMoreButton.addEventListener("click",() => {
+// 	homepageContainer.innerHTML = "";
+// 	data.slice(0, 20).forEach(element => {
+// 		const card = createCard(element);
+// 		homepageContainer.append(card);
+// 		});
+// 	})

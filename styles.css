@@ -9,8 +9,9 @@ body {
 header {
 	position: relative;
 	display: flex;
-	align-items: flex-end;
 	background-color: rgba(215, 228, 212, 1);
+	justify-content: center;
+	padding-top: 40px;
 }
 
 .sitename {
@@ -46,13 +47,9 @@ nav a {
     font-weight: bold;
 }
 
-.logo {
-	max-width: 100px;
-}
 
 main {
 	background-color: rgba(215, 228, 212, 0.32);
-	padding: 20px 50px;
 }
 
 .footer {
@@ -60,7 +57,7 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	padding: 30px;
+	padding: 20px;
 }
 
 .some-icons {
@@ -77,13 +74,68 @@ main {
 
 /* index.html  */
 
-.latest-post-header {
+.homepage-first-container {
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 }
 
-#homepage-blogs {
+.homepage-image {
+	max-width: 100%;
+}
+
+.index-section-two {
 	display: flex;
-	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+}
+
+.index-section-two-header, .latest-post-header {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-align: center;
+}
+
+.latest-post-header {
+	font-size: 35px;
+	padding-top: 100px;
+}
+
+.index-section-two-part-one, .index-section-two-part-two, .index-section-two-part-three {
+	padding: 20px 30px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.homepage-container {
+	display: flex;
+	position: relative;
+	justify-content: center;
+    flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 20px;
+	padding-bottom: 40px;
+}
+
+.card {
+	max-width: 300px;
+	text-align: center;
+}
+
+.card-image {
+	max-width: 300px;
+	max-height: 300px;
+	justify-content: center;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+	font-size: 26px;
+	
+}
+
+.fa-chevron-right {
+	position: absolute;
+    right: 50px;
+    top: 710px;
 }
 
 
@@ -97,6 +149,14 @@ main {
 }
 
 /* blogs.html */
+
+#blog-container {
+	display: flex;
+	justify-content: center;
+    flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 40px;
+}
 
 
 /* specificblog.html */
@@ -134,7 +194,7 @@ form label {
 	max-width: 650px;
 }
 
-.submit-message-button {
+.submit-message-button, #view-more-button {
 	margin-top: 30px;
 	max-width: 100px;
 	padding: 5px 10px;
@@ -196,7 +256,18 @@ form label {
 
 }
 
+@media(min-width:860px) {
 
-@media(min-width:1150px) {
+	.homepage-first-container {
+		display: grid;
+		grid-template-columns: 500px 1fr;
+	}
 
+}
+
+
+@media(max-width:1040px) {
+	.fa-chevron-left, .fa-chevron-right {
+		display: none;
+	}
 }
