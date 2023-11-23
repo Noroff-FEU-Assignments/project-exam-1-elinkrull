@@ -1,7 +1,7 @@
 /* global code  */
 
 body {
-	font-family: sans-serif, Verdana, Arial, Helvetica;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	margin: auto;
     max-width: 100%;
 }
@@ -14,8 +14,14 @@ header {
 	padding-top: 40px;
 }
 
+h1 {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 20px;
+	color: rgba(7, 65, 30, 1);
+}
+
 .sitename {
-	color: rgba(5, 84, 36, 1);
+	color: rgba(7, 65, 30, 1);
 	font-size: 20px;
 }
 
@@ -31,7 +37,7 @@ nav, #hamburger-checkbox {
 }
 
 nav a {
-	color: rgba(5, 84, 36, 1);
+	color: rgba(7, 65, 30, 1);
     display: block;
 	text-decoration: none;
 }
@@ -47,7 +53,6 @@ nav a {
     font-weight: bold;
 }
 
-
 main {
 	background-color: rgba(215, 228, 212, 0.32);
 }
@@ -61,14 +66,14 @@ main {
 }
 
 .some-icons {
-	color: rgba(5, 84, 36, 1);
+	color: rgba(7, 65, 30, 1);
 	display: flex;
 	font-size: 25px;
 	gap: 25px;
 }
 
 .by-name {
-	color: rgba(56, 109, 77, 1);
+	color: rgba(7, 65, 30, 1);
 	font-size: 20px;
 }
 
@@ -85,13 +90,13 @@ main {
 }
 
 .index-section-two {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	display: flex;
 	justify-content: center;
     flex-direction: column;
 }
 
 .index-section-two-header, .latest-post-header {
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	text-align: center;
 }
 
@@ -141,11 +146,21 @@ main {
 
 /* about.html */
 
-.about-section {
+
+.about-section, .about-text {
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
-	padding: 40px 30px 80px 30px;
+}
+
+.about-text {
+	color: rgba(7, 65, 30, 1);
+	text-align: center;
+	position: relative;
+	z-index: 10;
+	background-color:  rgba(215, 228, 212, 1);
+	padding: 30px;
+	max-width: 800px;
 }
 
 /* blogs.html */
@@ -261,6 +276,10 @@ form label {
 	.homepage-first-container {
 		display: grid;
 		grid-template-columns: 500px 1fr;
+	}
+
+	.about-text {
+		font-size: 20px;
 	}
 
 }
