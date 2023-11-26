@@ -13,8 +13,7 @@ function showLoadingIndicator() {
 }
 
 // API call blog posts
-const url = "https://projectexam1.elinjakobsen.no/wp-json/wp/v2/posts";
-
+const url = "https://projectexam1.elinjakobsen.no/wp-json/wp/v2/posts?per_page=20";
 async function getPosts() {
 	try {
 		showLoadingIndicator();
@@ -34,6 +33,7 @@ async function getPosts() {
 // 	const text = div.innerText;
 // 	return text;
 // }
+
 
 async function displayPosts(data) {	
 		const homepageContainer = document.getElementById("homepage-container");
@@ -75,3 +75,42 @@ async function init() {
 }
 
 init();
+
+
+//function to navigate to blogs.html when view more button is being clicked
+
+const viewMoreButton = document.getElementById("view-more-button")
+
+viewMoreButton.addEventListener("click", () => {
+		window.location.href = `blogs.html`;
+});
+
+
+// //making carousel slider
+// const carouselItems = document.querySelectorAll(".card")
+// let currentIndex = 0;
+
+// function slideShow(index) {
+// 	carouselItems.forEach(item => {
+// 	item.style.display = "none";
+// 	});
+
+// 	carouselItems[index].style.display = `block`;
+// }
+
+// function nextSlide() {
+// 	currentIndex = (currentIndex + 1) % carouselItems.length;
+// 	slideShow(currentIndex);
+// }
+
+// function previousSlide() {
+// 	currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+// 	slideShow(currentIndex);
+// }
+
+// slideShow(currentIndex);
+
+// //eventlisteners for arrows
+// document.getElementById("carousel-arrow-left").addEventListener("click", nextSlide);
+// document.getElementById("carousel-arrow-right").addEventListener("click", previousSlide);
+

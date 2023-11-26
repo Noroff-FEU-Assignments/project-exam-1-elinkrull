@@ -15,8 +15,11 @@ header {
 }
 
 h1 {
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	font-size: 20px;
+	color: rgba(7, 65, 30, 1);
+}
+
+h2 {
 	color: rgba(7, 65, 30, 1);
 }
 
@@ -68,13 +71,12 @@ main {
 .some-icons {
 	color: rgba(7, 65, 30, 1);
 	display: flex;
-	font-size: 25px;
-	gap: 25px;
+	gap: 15px;
 }
 
 .by-name {
+	font-size: 12px;
 	color: rgba(7, 65, 30, 1);
-	font-size: 20px;
 }
 
 /* index.html  */
@@ -119,11 +121,13 @@ main {
 	align-items: flex-end;
 	gap: 20px;
 	padding-bottom: 40px;
+	overflow: hidden;
 }
 
 .card {
 	max-width: 300px;
 	text-align: center;
+	display: none;
 }
 
 .card-image {
@@ -133,34 +137,40 @@ main {
 }
 
 .fa-chevron-left, .fa-chevron-right {
-	font-size: 26px;
-	
+	font-size: 30px;
+	position: absolute;
+}
+
+.fa-chevron-left {
+	left: 200px;
+	top: 1220px;	
 }
 
 .fa-chevron-right {
-	position: absolute;
-    right: 50px;
-    top: 710px;
+    right: 200px;
+    top: 1220px;
+}
+
+.view-more-container {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 40px;
 }
 
 
 /* about.html */
 
-
 .about-section, .about-text {
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
 }
 
 .about-text {
 	color: rgba(7, 65, 30, 1);
 	text-align: center;
-	position: relative;
 	z-index: 10;
-	background-color:  rgba(215, 228, 212, 1);
 	padding: 30px;
-	max-width: 800px;
+	gap: 30px;
 }
 
 /* blogs.html */
@@ -173,12 +183,24 @@ main {
 	gap: 40px;
 }
 
+.read-more-button {
+	text-decoration: none;
+}
+
 
 /* specificblog.html */
 
+.specific-blog-main {
+	display: flex;
+	padding: 20px;
+}
 
 
 /* contact.html */
+
+.contact-main {
+	padding: 20px;
+}
 
 .contact-header {
 	padding-left: 30px;
@@ -209,13 +231,16 @@ form label {
 	max-width: 650px;
 }
 
-.submit-message-button, #view-more-button {
+.submit-message-button, #view-more-button, .read-more-button {
 	margin-top: 30px;
-	max-width: 100px;
 	padding: 5px 10px;
 	background-color: rgba(56, 109, 77, 1);
 	color: white;
 	font-size: 16px;
+}
+
+.submit-message-button {
+	max-width: 100px;
 }
 
 .form-error {
@@ -246,6 +271,19 @@ form label {
 		gap: 60px;
 		padding-bottom: 20px;
     }
+
+	h1 {
+		font-size: 26px;
+	}
+
+	.some-icons {
+		font-size: 25px;
+	}
+
+	.by-name {
+		font-size: 20px;
+	}
+
 }
 
 
@@ -253,9 +291,10 @@ form label {
 
     nav {
         display: flex;
-        font-size: 20px;
+        font-size: 26px;
 		gap: 100px;
     }
+
 
 	.about-section, #contact-form {
 		padding: 40px 150px 80px 150px;
@@ -290,3 +329,13 @@ form label {
 		display: none;
 	}
 }
+
+
+
+@media(min-width:1200px) {
+
+
+}
+
+
+

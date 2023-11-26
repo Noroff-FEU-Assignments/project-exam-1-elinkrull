@@ -1,8 +1,9 @@
 //Form validation for the contact form
 
 const form = document.querySelector("#contact-form");
-const name = document.querySelector("#name");
+const fullname = document.querySelector("#name");
 const nameError = document.querySelector("#name-error");
+const minLengthName = 5;
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#email-error");
 const subject = document.querySelector("#subject");
@@ -11,11 +12,12 @@ const message = document.querySelector("#message");
 const messageError = document.querySelector("#message-error");
 const inputField = document.querySelector("#name", "#email", "#subject", "#message");
 
+
 function validateForm(event) {
 
 	event.preventDefault();
 
-	if (name.value.trim().length > 5) {
+	if (fullname.value.trim().length > 5) {
 		nameError.style.display = "none";
 	} else {
 		nameError.style.display = "block";
@@ -50,13 +52,4 @@ function validateEmail(email) {
 	const patternMatches = regEx.test(email);
 	return patternMatches;
 }
-
-//function to validate the form when click is made outside the inputfield
-// document.addEventListener("click", function (event) {
-// 	if (!inputField.contains(event.target)) {
-// 		validateForm(event);
-// 	}
-// });
-
-
 
