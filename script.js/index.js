@@ -48,19 +48,23 @@ async function displayPosts() {
 											 <a href="specificblog.html?id=${post.id}&title=${post.title.rendered}"><img src="${post.jetpack_featured_media_url}" alt="${post.title.rendered}" class="card-image">
 											 <h2>${post.title.rendered}</h2></a>
 											<a href="specificblog.html?id=${post.id}&title=${post.title.rendered}">
-											</li>`;
+											</li>`;			
+							
+	
+const slidesContainer = document.getElementById("carousel-container");
+const slide = carouselContainer.querySelector(".index-card");
+const prevButton = document.getElementById("carousel-arrow-prev");
+const nextButton = document.getElementById("carousel-arrow-next");
 
+nextButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft += slideWidth;
+});
 
- //display first 3 posts on the page
-  const cards = document.querySelectorAll('.index-card');
-
-  const cardsArray = Array.from(cards);
-
-  const first3Cards = cardsArray.slice(0, 3);
-  
-  first3Cards.forEach(card => {
-	card.style.display = 'block';
-  });				
+prevButton.addEventListener("click", () => {
+  const slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft -= slideWidth;
+});
 	  
 	  }
  } catch (error) {
@@ -68,6 +72,7 @@ async function displayPosts() {
 	}}
   
   displayPosts();
+
 
 
 //function to navigate to blogs.html when view more button is being clicked
