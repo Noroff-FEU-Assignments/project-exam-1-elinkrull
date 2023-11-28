@@ -45,7 +45,8 @@ async function displayPosts() {
 		blogPostsContainer.innerHTML += `<div class="card">
 											 <a href="specificblog.html?id=${post.id}&title=${post.title.rendered}"><img src="${post.jetpack_featured_media_url}" alt="${post.title.rendered}" class="card-image">
 											 <h2>${post.title.rendered}</h2></a>
-											<a href="specificblog.html?id=${post.id}&title=${post.title.rendered}" class="read-more-button"><span>Read more</span></a>
+											<a href="specificblog.html?id=${post.id}&title=${post.title.rendered}"</a>
+											<span class="read-more-button">Read more</span>
 											</div>`;
 
  //display first 10 posts on the page
@@ -94,11 +95,11 @@ if(currentPosts >= blogPosts.length) {
 
 
 // async function displayPosts(data) {	
-// 		const homepageContainer = document.getElementById("blog-container");
-// 		homepageContainer.innerHTML = "";
+// 		const carouselContainer = document.getElementById("blog-container");
+// 		carouselContainer.innerHTML = "";
 // 		data.slice(0, 10).forEach(element => {
 // 			const card = createCard(element);
-// 			homepageContainer.append(card);
+// 			carouselContainer.append(card);
 // 		});
 
 // 		function createCard(element) {

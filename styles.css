@@ -31,18 +31,21 @@ h2 {
 #hamburger-checkbox:checked ~ nav {
     display: block;
     position: absolute;
-    bottom: -80px;
-	right: 10px;
+    bottom: -120px;
+    right: 0px;
 }
 
 nav, #hamburger-checkbox {
     display: none;
+	padding: 15px;
+	background-color: rgba(215, 228, 212, 1);
 }
 
 nav a {
 	color: rgba(7, 65, 30, 1);
     display: block;
 	text-decoration: none;
+	padding: 2px;
 }
 
 .fa-bars {
@@ -81,7 +84,7 @@ main {
 
 /* index.html  */
 
-.homepage-first-container {
+.homepage-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -113,7 +116,7 @@ main {
 	font-size: 20px;
 }
 
-.homepage-container {
+.carousel-container {
 	display: flex;
 	position: relative;
 	justify-content: center;
@@ -121,10 +124,11 @@ main {
 	align-items: flex-end;
 	gap: 20px;
 	padding-bottom: 40px;
-	overflow: hidden;
+	overflow: scroll;
+	scroll-behavior: smooth;
 }
 
-.card {
+.index-card {
 	max-width: 300px;
 	text-align: center;
 	display: none;
@@ -135,6 +139,7 @@ main {
 	max-height: 300px;
 	justify-content: center;
 }
+
 
 .fa-chevron-left, .fa-chevron-right {
 	font-size: 30px;
@@ -156,6 +161,7 @@ main {
 	justify-content: center;
 	padding-bottom: 40px;
 }
+
 
 
 /* about.html */
@@ -183,8 +189,10 @@ main {
 	gap: 40px;
 }
 
-.read-more-button {
-	text-decoration: none;
+.card {
+	max-width: 300px;
+	text-align: center;
+	display: none;
 }
 
 
