@@ -25,16 +25,16 @@ function getPostIdFromQuery() {
 
 
 //  Function to extract the blog post title from the query parameter
-// function getPostTitleFromQuery() {
-// 	try {
-// 		const urlParams = new URLSearchParams(window.location.search);
-// 		const title = urlParams.get("title");
-// 		console.log(title);
-// 		return title;
-// 	}	catch (error) {
-// 		throw new Error("Sorry, we could not fetch the Title");
-// 	}
-// }
+function getPostTitleFromQuery() {
+	try {
+		const urlParams = new URLSearchParams(window.location.search);
+		const title = urlParams.get("title");
+		console.log(title);
+		return title;
+	}	catch (error) {
+		throw new Error("Sorry, we could not fetch the Title");
+	}
+}
 
 async function fetchPostDetail() {
 	try {
@@ -42,12 +42,18 @@ async function fetchPostDetail() {
 	
 	const postId = getPostIdFromQuery();
 	
-	// const title = getPostTitleFromQuery();
+	const title = getPostTitleFromQuery();
 
 	if(!postId) {
 		showError("The blog post ID is not avaliable");
 		return;
 	}
+
+		if(!title) {
+		showError("The blog posts title is not available");
+		return;
+	}
+
 
 	const response = await fetch(`https://projectexam1.elinjakobsen.no/wp-json/wp/v2/posts/${postId}`);
 	if (!response.ok) {
@@ -55,12 +61,12 @@ async function fetchPostDetail() {
 	 }
 	const postDetail = await response.json();
 
-	// const postTitleContainer = document.getElementById("title");
+	const postTitleContainer = document.getElementById("title");
 	const postDetailContainer = document.getElementById("specific-post-container");
 	postDetailContainer.innerHTML= "";
 
 	// Add post title to the title of the page
-	// postTitleContainer.textContent = title;
+	postTitleContainer.textContent = title;
 	postDetailContainer.innerHTML = `
 	<h2>${postDetail.title.rendered}</h2>
 	<div class="image-content-container">
@@ -112,8 +118,4 @@ if (
 
 fetchPostDetail();
 
-// 	if(!name) {
-// 		showError("The blog posts title is not available");
-// 		return;
-// 	}
 
