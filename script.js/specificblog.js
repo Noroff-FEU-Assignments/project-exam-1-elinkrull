@@ -62,14 +62,16 @@ async function fetchPostDetail() {
 	// Add post title to the title of the page
 	// postTitleContainer.textContent = title;
 	postDetailContainer.innerHTML = `
-	<h2>${postDetail.id}: ${postDetail.title.rendered}</h2>
+	<h2>${postDetail.title.rendered}</h2>
 	<p>${postDetail.content.rendered}</p>
+	
+	
 
-		<button data-open-modal></button>
+		<button data-open-modal><img src="${postDetail.jetpack_featured_media_url}" alt="${postDetail.title.rendered}" class="card-image"></button>
 
 		<dialog data-modal class="modal">
-			<div>This is a modal</div>
-			<button data-close-modal>Close</button>
+		<img src="${postDetail.jetpack_featured_media_url}" alt="${postDetail.title.rendered}" class="card-image">
+		<button data-close-modal>X</button>
 		</dialog>
 	`;
 
