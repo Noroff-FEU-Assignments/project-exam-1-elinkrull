@@ -72,7 +72,7 @@ async function fetchPostDetail() {
 	<div class="image-content-container">
 		<div>
 			<button data-open-modal>
-				<img src="${postDetail.jetpack_featured_media_url}" alt="${postDetail.title.rendered}" class="card-image">
+				<img src="${postDetail.jetpack_featured_media_url}" alt="${postDetail.title.rendered}" class="specificblog-image">
 			</button>
 			<dialog data-modal class="modal">
 				<img src="${postDetail.jetpack_featured_media_url}" alt="${postDetail.title.rendered}" class="modal-image">

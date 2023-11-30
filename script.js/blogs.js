@@ -43,7 +43,7 @@ async function displayPosts() {
 		const post = blogPosts[i];
   
 		blogPostsContainer.innerHTML += `<div class="card">
-											 <a href="specificblog.html?id=${post.id}&title=${post.title.rendered}"><img src=${post.jetpack_featured_media_url} alt="${post.title.rendered}" class="card-image">
+											 <a href="specificblog.html?id=${post.id}&title=${post.title.rendered}"><img src=${post.jetpack_featured_media_url} alt="${post.title.rendered}" class="blog-image">
 											 <h2 class="post-title">${post.title.rendered}</h2>
 											<span class="read-more-button">Read more</span>
 											</div>`;

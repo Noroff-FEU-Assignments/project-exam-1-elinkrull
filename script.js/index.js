@@ -47,7 +47,7 @@ async function displayPosts() {
 		carouselContainer.innerHTML += `<li class="index-card">
 											 <a href="specificblog.html?id=${post.id}&title=${post.title.rendered}">
 											 <img src="${post.jetpack_featured_media_url}" alt="${post.title.rendered}" class="card-image">
-											 <h2 class="post-title">${post.title.rendered}</h2></a>
+											 <h2 class="post-title">${post.title.rendered}</h2></>
 											</li>`;			
 							
 	
