@@ -63,16 +63,21 @@ async function fetchPostDetail() {
 	// postTitleContainer.textContent = title;
 	postDetailContainer.innerHTML = `
 	<h2>${postDetail.title.rendered}</h2>
-	<p>${postDetail.content.rendered}</p>
-	
-	
-
-		<button data-open-modal><img src="${postDetail.jetpack_featured_media_url}" alt="${postDetail.title.rendered}" class="card-image"></button>
-
-		<dialog data-modal class="modal">
-		<img src="${postDetail.jetpack_featured_media_url}" alt="${postDetail.title.rendered}" class="card-image">
-		<button data-close-modal>X</button>
-		</dialog>
+	<div class="image-content-container">
+		<div>
+			<button data-open-modal>
+				<img src="${postDetail.jetpack_featured_media_url}" alt="${postDetail.title.rendered}" class="card-image">
+			</button>
+			<dialog data-modal class="modal">
+				<img src="${postDetail.jetpack_featured_media_url}" alt="${postDetail.title.rendered}" class="modal-image">
+				<button data-close-modal>X
+				</button>
+			</dialog>
+		</div>
+		<div>
+			<p class="specificblog-content">${postDetail.content.rendered}</p>
+		</div>
+	</div>
 	`;
 
 const openButton = document.querySelector("[data-open-modal]")
