@@ -43,9 +43,9 @@ async function displayPosts() {
 		const post = blogPosts[i];
   
 		blogPostsContainer.innerHTML += `<div class="card">
-											 <a href="specificblog.html?id=${post.id}&title=${post.title.rendered}"><img src=${post.jetpack_featured_media_url} alt="${post.title.rendered}" class="blog-image">
+											 <a href="specificblog.html?id=${post.id}&title=${post.title.rendered}"><img src=${post.jetpack_featured_media_url} alt="${post.title.rendered}" class="blog-image"></a>
 											 <h2 class="post-title">${post.title.rendered}</h2>
-											<span class="read-more-button">Read more</span>
+											 <a href="specificblog.html?id=${post.id}&title=${post.title.rendered}"><button class="read-more-button">Read more</button></a>
 											</div>`;
 
  //display first 10 posts on the page

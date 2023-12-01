@@ -25,20 +25,20 @@ h2 {
 
 .sitename {
 	color: rgba(7, 65, 30, 1);
-	font-size: 20px;
+	font-size: 26px;
 }
 
 #hamburger-checkbox:checked~nav {
 	display: block;
 	position: absolute;
-	bottom: -120px;
+	bottom: -160px;
 	right: 0px;
 }
 
 nav,
 #hamburger-checkbox {
 	display: none;
-	padding: 15px;
+	padding: 20px;
 	background-color: rgba(215, 228, 212, 1);
 }
 
@@ -46,14 +46,16 @@ nav a {
 	color: rgba(7, 65, 30, 1);
 	display: block;
 	text-decoration: none;
-	padding: 2px;
+	padding: 4px;
+	font-size: 22px;
 }
 
 .fa-bars {
 	position: absolute;
-	font-size: 16px;
-	bottom: 20px;
+	font-size: 26px;
+	bottom: 30px;
 	right: 20px;
+	color: rgba(7, 65, 30, 1);
 }
 
 .onpage {
@@ -85,7 +87,7 @@ main {
 
 /* index.html  */
 
-.homepage-container {
+.homepage-first-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -95,54 +97,49 @@ main {
 	max-width: 100%;
 }
 
-.index-section-two {
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.index-section-two-header,
+.homepage-header,
 .latest-post-header {
 	text-align: center;
+	font-size: 26px;
 }
 
 .latest-post-header {
-	font-size: 20px;
-	padding-top: 50px;
+	padding-top: 40px;
 }
 
-.index-section-two-part-one,
-.index-section-two-part-two,
-.index-section-two-part-three {
+.first-container-text {
 	padding: 20px 30px;
 	text-align: center;
 	font-size: 20px;
 }
-
+	
+.latest-post-container {
+	display: flex;
+	justify-content: center;
+}
+	
 .carousel-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-
-.carousel-arrow {
-	display: none;
+	max-width: 300px;
+    gap: 20px;
+	padding: 0px;
 }
 
 .index-card {
+	display: block;
 	justify-content: center;
 	align-items: center;
 	max-width: 350px;
-	/* width: 100%; */
 	padding: 20px 40px;
 	margin-top: 20px;
 	background-color:  rgba(215, 228, 212, 1);
 }
+
 .post-title {
 	display: flex;
-	padding: 20px;
-	text-decoration: none;
+	padding: 10px;
 }
 
 .card-image {
@@ -190,6 +187,11 @@ main {
 	display: none;
 }
 
+.blog-image {
+	max-width: 100%;
+	max-height: 300px;
+	object-fit: cover;
+}
 
 /* specificblog.html */
 
@@ -198,11 +200,19 @@ main {
 	padding: 20px;
 }
 
-
 .image-content-container {
 	display: flex;
 	flex-direction: column;
-	padding: 20px;
+	/* padding: 20px; */
+}
+
+.specificblog-image {
+	display: flex;
+	max-width: 250px;
+}
+
+.modal-image {
+	max-width: 100%;
 }
 
 
@@ -348,11 +358,17 @@ form label {
 
 }
 
+@media(max-width:860px) {
+
+	.carousel-arrow, #carousel-arrow-prev, #carousel-arrow-next {
+		display: none;
+	}	
+}
+
 @media(min-width:860px) {
 
-	.homepage-first-container {
-		display: grid;
-		grid-template-columns: 500px 1fr;
+	.homepage-image-container {
+		float: left;
 	}
 
 	.about-text {
@@ -360,7 +376,8 @@ form label {
 	}
 
 	.latest-post-container {
-		margin: 20px 100px;
+		max-width: 1100px;
+		margin: 20px auto;
 		position: relative;
 		overflow: hidden;
 		background-color:  rgba(215, 228, 212, 1);
@@ -368,33 +385,34 @@ form label {
 
 	.latest-post-header {
 		font-size: 35px;
-		padding-top: 80px;
+		padding-top: 50px;
+	}
+
+	.post-title {
+		font-size: 20px;
 	}
 
 	.carousel-container {
-		/* height: calc(100vh - 2rem); */
-		width: 100%;
+		height: 500px;
+		max-width: 100%;
 		display: flex;
 		flex-direction: row;
 		overflow: scroll;
 		scroll-behavior: smooth;
 		list-style: none;
-		margin: 0;
 		padding: 0;
-		justify-content: center;
+		gap: 0;
 	}
-	
+		
 	.index-card {
-		display: flex;
-		flex-direction: column;
 		width: 100%;
-		height: 100%;
+		height: 80%;
 		flex: 1 1 100%;
 	}
 	
 	.card-image {
 		max-width: 400px;
-		max-height: 300px;
+		max-height: 250px;
 		object-fit: cover;
 	}
 	
@@ -405,7 +423,8 @@ form label {
 		bottom: 0;
 		margin: auto;
 		height: 4rem;
-		background-color: white;
+		color: white;
+		background-color:  rgba(7, 65, 30, 1);
 		border: none;
 		width: 2rem;
 		font-size: 3rem;
@@ -432,7 +451,6 @@ form label {
 		border-radius: 2rem 0 0 2rem;
 	}
 	
-
 }
 
 
