@@ -89,48 +89,9 @@ if(currentPosts >= blogPosts.length) {
 }
 });
 
+//function to navigate to index.html when the sitename in header on mobile view is getting clicked
+const navigateHome = document.querySelector(".sitename")
 
-
-
-
-// async function displayPosts(data) {	
-// 		const carouselContainer = document.getElementById("blog-container");
-// 		carouselContainer.innerHTML = "";
-// 		data.slice(0, 10).forEach(element => {
-// 			const card = createCard(element);
-// 			carouselContainer.append(card);
-// 		});
-
-// 		function createCard(element) {
-// 			console.log(element);
-// 			const { id, title, jetpack_featured_media_url } = element;
-// 			if (!id || !title || !jetpack_featured_media_url) {
-// 				showError(error.message);	
-// 				return;									
-// 			} 
-	
-// 			const divElement = document.createElement("div");
-// 			const h2Element = document.createElement("h2");
-// 			const pElement = document.createElement("p");
-// 			const imageElement = document.createElement("img");
-// 			imageElement.classList.add("card-image");
-// 			imageElement.src = jetpack_featured_media_url;
-// 			divElement.classList.add("card");
-// 			divElement.id = element.id;
-// 			divElement.addEventListener("click", () => {
-// 				window.location.href = `specificblog.html?id=${element.id}`;
-// 			  });
-
-// 			h2Element.textContent = element.title.rendered;
-// 			pElement.textContent = element.content.rendered;
-// 			divElement.append(h2Element, imageElement);
-// 			return divElement;
-// 		}
-// 	}
-
-// 	async function init() {
-// 		const data = await getPosts(url);	
-// 		displayPosts(data);
-// 	}
-	
-// 	init();
+navigateHome.addEventListener("click", () => {
+	window.location.href = `index.html`;
+});

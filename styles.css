@@ -4,6 +4,7 @@ body {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	margin: auto;
 	max-width: 100%;
+	min-height: 80vh;
 }
 
 header {

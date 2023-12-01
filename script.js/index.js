@@ -35,6 +35,7 @@ async function getPosts() {
 	  }
 }
 
+//function to display the blog posts
 async function displayPosts() {
 	try {
 	  const blogPosts = await getPosts();
@@ -50,7 +51,7 @@ async function displayPosts() {
 											 <h2 class="post-title">${post.title.rendered}</h2>
 											</li>`;			
 							
-	
+//creating the carousel for the 8 blog posts
 const slidesContainer = document.getElementById("carousel-container");
 const slide = carouselContainer.querySelector(".index-card");
 const prevButton = document.getElementById("carousel-arrow-prev");
@@ -75,10 +76,15 @@ prevButton.addEventListener("click", () => {
 
 
 //function to navigate to blogs.html when view more button is being clicked
-
 const viewMoreButton = document.getElementById("view-more-button")
 
 viewMoreButton.addEventListener("click", () => {
 		window.location.href = `blogs.html`;
 });
 
+//function to navigate to index.html when the sitename in header on mobile view is getting clicked
+const navigateHome = document.querySelector(".sitename")
+
+navigateHome.addEventListener("click", () => {
+	window.location.href = `index.html`;
+});
