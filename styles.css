@@ -3,7 +3,7 @@
 body {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	margin: auto;
-	max-width: 100%;
+	max-width: 1600px;
 	min-height: 80vh;
 }
 
@@ -173,6 +173,7 @@ main {
 }
 
 /* blogs.html */
+
 
 #blog-container {
 	display: flex;
