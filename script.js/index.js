@@ -30,17 +30,16 @@ async function getPosts() {
 
 	} catch (error) {
 		throw new Error("Sorry, we could not fetch the blog posts");
-	  } finally {
-		hideLoadingIndicator();
 	  }
 }
 
 //function to display the blog posts
 async function displayPosts() {
 	try {
+	  showLoadingIndicator();
 	  const blogPosts = await getPosts();
 	  const carouselContainer = document.getElementById("carousel-container");
-	  carouselContainer.innerHTML = "";
+	  hideLoadingIndicator();
   
 	  for (let i = 0; i < 8 ; i++) {
 		const post = blogPosts[i];
@@ -57,11 +56,13 @@ const slide = carouselContainer.querySelector(".index-card");
 const prevButton = document.getElementById("carousel-arrow-prev");
 const nextButton = document.getElementById("carousel-arrow-next");
 
+//creating the click event to the left/prev arrow for the slider
 nextButton.addEventListener("click", () => {
   const slideWidth = slide.clientWidth;
   slidesContainer.scrollLeft += slideWidth;
 });
 
+//creating the click event to the right/next arrow for the slider
 prevButton.addEventListener("click", () => {
   const slideWidth = slide.clientWidth;
   slidesContainer.scrollLeft -= slideWidth;
@@ -80,11 +81,4 @@ const viewMoreButton = document.getElementById("view-more-button")
 
 viewMoreButton.addEventListener("click", () => {
 		window.location.href = `blogs.html`;
-});
-
-//function to navigate to index.html when the sitename in header on mobile view is getting clicked
-const navigateHome = document.querySelector(".sitename")
-
-navigateHome.addEventListener("click", () => {
-	window.location.href = `index.html`;
 });

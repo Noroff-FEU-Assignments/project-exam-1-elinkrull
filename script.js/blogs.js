@@ -28,23 +28,21 @@ async function getPosts() {
 
 	} catch (error) {
 		throw new Error("Sorry, we could not fetch the blog posts");
-	  } finally {
-		hideLoadingIndicator();
-	  }
+	  } 
 }
 
 async function displayPosts() {
 	try {
 	  const blogPosts = await getPosts();
 	  const blogPostsContainer = document.getElementById("blog-container");
-	 blogPostsContainer.innerHTML = "";
+	  hideLoadingIndicator();
   
 	  for (let i = 0; i < blogPosts.length ; i++) {
 		const post = blogPosts[i];
   
 		blogPostsContainer.innerHTML += `<div class="card">
 											 <a href="specificblog.html?id=${post.id}&title=${post.title.rendered}"><img src=${post.jetpack_featured_media_url} alt="${post.title.rendered}" class="blog-image"></a>
-											 <h2 class="post-title">${post.title.rendered}</h2>
+											 <h1 class="post-title">${post.title.rendered}</h1>
 											 <a href="specificblog.html?id=${post.id}&title=${post.title.rendered}"><button class="read-more-button">Read more</button></a>
 											</div>`;
 

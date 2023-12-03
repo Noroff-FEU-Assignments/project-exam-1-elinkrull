@@ -45,13 +45,13 @@ async function fetchPostDetail() {
 	const title = getPostTitleFromQuery();
 
 	if(!postId) {
-		showError("The blog post ID is not avaliable");
-		return;
+	showError("The blog post ID is not avaliable");
+	return;
 	}
 
-		if(!title) {
-		showError("The blog posts title is not available");
-		return;
+	if(!title) {
+	showError("The blog posts title is not available");
+	return;
 	}
 
 
@@ -68,7 +68,7 @@ async function fetchPostDetail() {
 	// Add post title to the title of the page
 	postTitleContainer.textContent = title;
 	postDetailContainer.innerHTML = `
-	<h2>${postDetail.title.rendered}</h2>
+	<h1>${postDetail.title.rendered}</h1>
 	<div class="image-content-container">
 		<div>
 			<button data-open-modal>
