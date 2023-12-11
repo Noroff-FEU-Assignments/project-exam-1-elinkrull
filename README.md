@@ -1,6 +1,6 @@
 # Plantastic Living
 
-![image](<img width="1228" alt="Skjermbilde 2023-12-11 kl  23 02 17" src="https://github.com/Noroff-FEU-Assignments/project-exam-1-elinkrull/assets/126721502/39ea2e33-829f-411a-af18-e4a0f3598104">)
+<img width="1228" alt="Skjermbilde 2023-12-11 kl  23 02 17" src="https://github.com/Noroff-FEU-Assignments/project-exam-1-elinkrull/assets/126721502/4e022010-54d6-406c-aa8a-39359fb163e4">
 
 The purpose of this project was to create a blog site.
 
