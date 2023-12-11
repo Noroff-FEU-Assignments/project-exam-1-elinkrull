@@ -1,8 +1,8 @@
 # Plantastic Living
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](<img width="1228" alt="Skjermbilde 2023-12-11 kl  23 02 17" src="https://github.com/Noroff-FEU-Assignments/project-exam-1-elinkrull/assets/126721502/39ea2e33-829f-411a-af18-e4a0f3598104">)
 
-To creaate a blog site.
+The purpose of this project was to create a blog site.
 
 ## Description
 
