@@ -19,8 +19,7 @@ There were also some requirements:
 - The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked.
 - The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
 - If images on the blog specific page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
-- The content for your website must be stored on a WordPress installation used as a Headless CMS.
-- You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+- The content for the website must be stored on a WordPress installation used as a Headless CMS.
 
 In the contact page, there should be 4 textboxes with these criterias:
 -	Name (Should be more than 5 characters long)
@@ -42,8 +41,6 @@ I had to use JavaScript for validation of the Form, and to show error messages i
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
 
 ```bash
@@ -56,7 +53,7 @@ Use the live server to open the website in the browser by clicking on "open in l
 
 ## Contributing
 
-Open a pull request so code can be reviewed.
+Open a pull request so that code can be reviewed.
 
 ## Contact
 
@@ -64,5 +61,6 @@ Open a pull request so code can be reviewed.
 
 ## Acknowledgments
 
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+ I would like to thank my classmates Siril Olsen, Anja Kvernenes, Bjornar Jakobsen, Alex Storm Skoglund and Rukaiya Tahsin for feedback on my website during the process.
 
+ I would also thank my classmates Tor-Hakon Bergseng and Siril Olson for sharing videotips for videos in youtube and Linkedin learning that I that I found very helpful.
